@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  install:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: composer
+    image: phpunit/issue-5111-composer:latest
+    volumes:
+      - .:/usr/src/myapp
+    entrypoint: composer require --dev phpunit/phpunit:${PHPUNIT_VERSION}
+
+  test:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: phpunit/issue-5111:latest
+    volumes:
+      - .:/usr/src/myapp
+    entrypoint: vendor/bin/phpunit ./tests
+
