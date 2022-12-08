@@ -4,7 +4,7 @@ Example for https://github.com/sebastianbergmann/phpunit/issues/5111
 ## Executing with PHPUnit 9.5.24
 ### Command
 ```shell
-$ PHPUNIT_VERSION=9.5.24 docker-compose run --rm install && docker-compose run --rm test
+PHPUNIT_VERSION=9.5.24 docker-compose run --rm install && docker-compose run --rm test
 ```
 ### Expected output
 ```text
@@ -23,7 +23,7 @@ OK (1 test, 1 assertion)
 ## Executing with PHPUnit 9.5.25
 ### Command
 ```shell
-$ PHPUNIT_VERSION=9.5.25 docker-compose run --rm install && docker-compose run --rm test
+PHPUNIT_VERSION=9.5.25 docker-compose run --rm install && docker-compose run --rm test
 ```
 ### Expected output
 ```text
